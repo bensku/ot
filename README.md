@@ -1,5 +1,5 @@
 # Stuff
-University *stuff*.
+University *stuff*. See the links:
 
 [gitlog.txt](https://github.com/bensku/ot/blob/master/laskarit/viikko1/gitlog.txt)
 
