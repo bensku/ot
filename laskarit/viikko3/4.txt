@@ -1,0 +1,36 @@
+Main->HKLLaitehallinto: <init>()
+HKLLaitehallinto->ArrayList: <init>()
+ArrayList->HKLLaitehallinto: lataajat
+HKLLaitehallinto->ArrayList: <init>()
+ArrayList->HKLLaitehallinto: lukijat
+HKLLaitehallinto->Main: laitehallinto
+
+Main->Lataajalaite: <init>()
+Lataajalaite->Main: rautatietori
+Main->Lukijalaite: <init>()
+Lukijalaite->Main: ratikka6
+Main->Lukijalaite: <init>()
+Lukijalaite->Main: bussi244
+
+Main->HKLLaitehallinto: lisaaLataaja(rautatietori)
+HKLLaitehallinto->ArrayList: lataajat.add(rautatietori)
+Main->HKLLaitehallinto: lisaaLukija(ratikka6)
+HKLLaitehallinto->ArrayList: lukijat.add(ratikka6)
+Main->HKLLaitehallinto: lisaaLukija(bussi244)
+HKLLaitehallinto->ArrayList: lukijat.add(bussi244)
+
+Main->Kioski: <init>()
+Kioski->Main: lippuLuukku
+
+Main->Kioski: ostaMatkakortti("arto")
+Kioski->Matkakortti: <init>("arto")
+Matkakortti->Kioski: artonKortti
+Kioski->Main: artonKortti
+Main->Lataajalaite: rautatietori.lataaArvoa(artonKortti, 3)
+Lataajalaite->Matkakortti: kasvataArvoa(3)
+
+Main->Lukijalaite: ratikka6.ostaLippu(artonKortti, 0)
+LukijaLaite->Matkakortti: vahennaArvoa(1.5)
+Lukijalaite->Main: true
+Main->Lukijalaite: bussi244.ostaLippu(artonKortti, 2)
+Lukijalaite->Main: false

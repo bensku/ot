@@ -1,0 +1,16 @@
+Main->Machine: <init>()
+Machine->FuelTank: <init>()
+FuelTank->Machine: tank
+Machine->FuelTank: fill(40)
+Machine->Engine: <init>(tank)
+Engine->Machine: engine
+Machine->Main: machine
+Main->Machine: drive()
+Machine->Engine: start()
+Engine->FuelTank: consume(5)
+Machine->Engine: isRunning()
+Engine->FuelTank: contentsLeft()
+FuelTank->Engine: fuelContents
+Engine->Machine: true
+Machine->Engine: useEnergy()
+Engine->FuelTank: consume(10)
